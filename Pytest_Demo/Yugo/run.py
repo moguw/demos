@@ -4,7 +4,7 @@ from common import allure_control
 
 if __name__ == "__main__":
     markers_type = os.environ['markers']
-    pytest.main(['-m %s']) %str(markers_type)
+    pytest.main(['-m %s'])% str(markers_type)
     # pytest.main(["-m smoke"])
     # pytest.main(["-m regression"])
 
