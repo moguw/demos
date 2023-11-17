@@ -3,7 +3,9 @@ from common import allure_control
 
 
 if __name__ == "__main__":
-    pytest.main(["-m smoke"])
+    markers = os.environ['markers']
+    pytest.main(["-m %s"] % markers)
+    # pytest.main(["-m smoke"])
     # pytest.main(["-m regression"])
 
     """生成allure报告"""
