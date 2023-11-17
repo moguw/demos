@@ -555,7 +555,7 @@ test_get_InstallmentsForSelection:
                 "tenancyOptionRateType": *tenancyOptionRateType,
                 "tenancyStartDate": *startDate,
                 "tenancyEndDate": *endDate,
-                "pricePerNightOriginal": 4.285714,
+                "pricePerNightOriginal": 2.285714,
                 "roomTypeId": *roomTypeId,
                 "services": []
             },
@@ -582,7 +582,7 @@ test_get_InstallmentWithPlans:
                 "tenancyEndDate": *endDate,
                 "studentId": *studentId,
                 "tenancyOptionRateType": *tenancyOptionRateType,
-                "pricePerNightOriginal": 4.285714,
+                "pricePerNightOriginal": 2.285714,
                 "services": [],
                 "roomTypeId": *roomTypeId
             }
