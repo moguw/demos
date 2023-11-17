@@ -35,7 +35,7 @@ mysql_port: 3410
 ssh_host: "bastion.project-g66.com"
 ssh_port: 22
 ssh_user: "dev"
-ssh_private_key: "/Users/lihao.wang/Desktop/Project/database/privateKey的副本.txt"
+ssh_private_key: "/Users/welcometoosl/privateKey.txt"
 charset: 'utf8'
 
 ######################################################################################################         
