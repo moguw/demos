@@ -5,7 +5,7 @@ import os,time,datetime,yaml,ast,random
 from typing import Any, Text, Union
 
 env_file = 'SmokeCase-uat3.yaml'
-project_path = '/DemoForPytest/Pytest_Demo/Yugo/conf/env/'
+project_path = '/Pytest_Demo/Yugo/conf/env/'
 
 def env_path():
     current_path = os.path.dirname(os.path.abspath('.'))
