@@ -1,0 +1,42 @@
+mutation CreateTenancyOption($propertyId: ID!, $tenancyOption: createTenancyInput!) {
+  createTenancyOption(propertyId: $propertyId, tenancyOption: $tenancyOption) {
+    ... QueryTenancyOptions
+  }
+}
+
+fragment QueryTenancyOptions on TenancyOption {
+  id
+  originId
+  name
+  rateType
+  referenceCount
+  freeCancelInterval
+  freeCancelBehaviorType
+  freeCancelPointType
+  intervalForTurnaround
+  description
+  tenancyType
+  startDateType
+  startDate
+  endDateType
+  endDate
+  validFrom
+  validTo
+  linkToNomination
+  isDifferentChargingDate
+  chargingStartDate
+  chargingEndDate
+  tenancyLengthType
+  tenancyLength
+  status
+  viewOnWebsite
+  roomGroups {
+    ...QueryRoomGroups
+  }
+}
+
+fragment QueryRoomGroups on RoomGroup {
+  id
+  originId
+  name
+}

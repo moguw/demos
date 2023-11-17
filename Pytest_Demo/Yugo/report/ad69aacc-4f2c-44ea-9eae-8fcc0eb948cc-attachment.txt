@@ -1,0 +1,5 @@
+[Sat, 07 Oct 2023 10:44:45]-[run.py]-[request_control.py]-[line:19]-[INFO]: ********************************************************************************
+[Sat, 07 Oct 2023 10:44:45]-[run.py]-[request_control.py]-[line:20]-[INFO]: variables: {"email": "testemail", "password": "support.uat1@student.com"}
+[Sat, 07 Oct 2023 10:44:45]-[run.py]-[request_control.py]-[line:21]-[INFO]: Response: {'errors': [{'message': 'INVALID_CREDENTIALS', 'locations': [{'line': 4, 'column': 5}], 'path': ['login'], 'extensions': {'code': 'UNAUTHENTICATED'}}], 'data': {'login': None}}
+[Sat, 07 Oct 2023 10:44:45]-[run.py]-[assert_control.py]-[line:50]-[DEBUG]: 期望 status_code 结果为:200;实际 status_code 结果为:200
+[Sat, 07 Oct 2023 10:44:45]-[run.py]-[assert_control.py]-[line:54]-[DEBUG]: 期望 errors_msg 结果为:INVALID_CREDENTIALS;实际 errors_msg 结果为:INVALID_CREDENTIALS

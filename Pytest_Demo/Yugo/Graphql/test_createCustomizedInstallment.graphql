@@ -1,0 +1,48 @@
+mutation CreateCustomizedInstallment($propertyId: ID! $input: CreateCustomizedInstallmentInput!) {
+  createCustomizedInstallment(propertyId: $propertyId, input: $input) {
+    ...QueryCustomizedInstallment
+  } 
+}
+
+fragment QueryCustomizedInstallment on CustomizedInstallment {
+  id
+  originId
+  name
+  roundingRule
+  roundingTo
+  isMarketingDefault
+  installmentType
+  guarantorRequired
+  allowedAllGuarantorLocation
+  guarantorCountries{
+    id
+    name
+    nationality
+  }
+  viewOnWebsite
+  tenancyOption {
+    ...QueryTenancyOption
+  }
+  customizedRentType
+  firstDueType
+  firstDueDateInterval
+  firstDueDateBehavior
+  firstDueDatePoint
+  firstDueDateValue
+  firstDueDateDay
+  customizedPlans {
+    ...QueryCustomizedPlan
+  }
+}
+
+fragment QueryTenancyOption on TenancyOption {
+  id
+  name
+}
+
+fragment QueryCustomizedPlan on CustomizedPlan {
+  id
+  originId
+  dueDate
+  value
+}

@@ -1,0 +1,265 @@
+mutation SelectBed($propertyId: ID! $input: selectBedInput!) {
+  selectBed(propertyId: $propertyId, input: $input) {
+    ...QueryBooking
+  }
+}
+
+
+fragment QueryBooking on Booking {
+  id
+  originId
+  heldToTime
+  status
+  statusLastChangedTime
+  pricePerNightAfterService
+  pricePerNightOriginal
+  pricePerNight
+  totalPriceOriginal
+  totalPriceAfterService
+  totalPrice
+  rentalTaxRate
+  rentalTaxRateType
+  currency
+  checkInDate
+  checkOutDate
+  expiredReason
+  category
+  expiredReason
+  cancelledReason
+  statusBeforeDisabled
+  device
+  source
+  serviceSelections {
+    ...QueryServiceSelection
+  }
+  student {
+    id
+    originId
+    fullName
+  }
+  roomType {
+    ...QueryRoomType
+  }
+  tenancyOption {
+    ...QueryTenancyOption
+  }
+  academicYear {
+    ...QueryAcademicYear
+  }
+  rateFlexibility {
+    ...QueryRateFlexibleInfo
+  }
+  roomAllocation {
+    ...QueryRoomAllocation
+  }
+  bedStatus {
+    ...QueryBedStatusInfo
+  }
+  installment {
+    ...QueryInstallment
+  }
+  installmentPlans {
+    ...QueryInstallmentPlan
+  }
+  bookingAdditionalFees {
+    ...QueryBookingAdditionalFee
+  }
+  contracts {
+    ...QueryContract
+  }
+  guarantors {
+    ...QueryGuarantor
+  }
+  documents {
+    ...QueryDocument
+  }
+  attachments {
+    ...QueryAttachment
+  }
+  arrivalInformation {
+    ...QueryArrivalInformation
+  }
+}
+
+
+fragment QueryServiceSelection on ServiceSelection {
+	id
+  originId
+  serviceId
+  serviceName
+  serviceOptionName
+  serviceType
+  serviceIncrementType
+  serviceOriginalPriceContribution
+  incrementPerBillingCycle
+  incrementPerNight
+  incrementInTotal
+  salesItemName
+  taxRate
+  serviceOptionName
+  isTaxRateIncludedInPrice
+}
+
+fragment QueryRoomType on BookingRoomTypeInfo {
+  roomTypeId
+  name
+}
+
+fragment QueryTenancyOption on BookingTenancyOptionInfo {
+  tenancyOptionId
+  name
+  startDate
+  endDate
+  length
+  intervalForTurnaround
+}
+
+fragment QueryAcademicYear on	AcademicYear {
+  id
+  originId
+  name
+  fromYear
+  toYear
+  isEnabled
+  isCurrent
+}
+
+fragment QueryRateFlexibleInfo on RateFlexibilityInfo {
+  rateFlexibilityType
+  freeCancellationDeadlineDate
+}
+
+fragment QueryRoomAllocation on RoomAllocationInfo {
+  bedId
+  bedName
+  buildingName
+  floorName
+  flatName
+  roomName
+}
+
+fragment QueryBedStatusInfo on BedStatusInfo {
+  id
+  originId
+  dateFrom
+  dateTo
+  status
+  bed {
+    id
+    originId
+    name
+    property {
+      id
+      originId
+      name
+    }
+    building {
+      id
+      originId
+      name
+    }
+    floor {
+      id
+      originId
+      name
+    }
+    flat {
+      id
+      originId
+      name
+    }
+    room {
+      id
+      originId
+      name
+    }
+  }
+}
+
+fragment QueryInstallment on BookingInstallmentInfo {
+  installmentId
+  name
+}
+
+fragment QueryInstallmentPlan on BookingInstallmentPlan {
+  id
+  originId
+  isDueBeforeBookingConfirmed
+  dueDate
+  amountDue
+}
+
+fragment QueryContract on Contract {
+  id
+  originId
+  name
+  fileUuid
+  contractStage
+  status
+  archivedTime
+  archivedReason
+  acceptedIp
+  acceptedTime
+}
+
+fragment QueryGuarantor on Contact {
+  id
+  originId
+  contactType
+  relationship
+  firstName
+  middleName
+  lastName
+  countryTerritory
+  cityTown
+  addressLine1
+  addressLine2
+  postcode
+  homePhoneAreaCode
+  mobilePhoneNumber
+  homePhoneAreaCode
+  homePhoneNumber
+	contactEmail
+  contactWithoutPermission
+}
+
+fragment QueryDocument on Document {
+  id
+  originId
+  name
+  fileUuid
+  status
+}
+
+fragment QueryAttachment on Attachment {
+  id
+  originId
+  name
+  fileUuid
+  staffOnly
+}
+
+fragment QueryArrivalInformation on ArrivalInformation {
+  id
+  originId
+  arrivalDate
+  timeSlotFrom
+  modeOfArrival
+  flightNumber
+  message
+}
+
+fragment QueryBookingAdditionalFee on BookingAdditionalFee {
+  additionalFeeCardConfigId
+  name
+  dueDate
+  taxAmount
+  dueAmount
+  dueAmountWithTax
+  feature
+  description
+  installmentIndex
+  installmentNumber
+  isDueBeforeBookingConfirmed
+  salesItemId
+}

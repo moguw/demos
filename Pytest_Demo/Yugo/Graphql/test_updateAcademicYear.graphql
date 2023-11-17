@@ -1,0 +1,5 @@
+mutation updateAcademicYear($propertyId :ID! $academicYear:updateAcademicYearInput!){
+  updateAcademicYear(propertyId:$propertyId ,academicYear:$academicYear){
+    ...QueryAcademicYear
+  }
+}

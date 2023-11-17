@@ -1,0 +1,72 @@
+mutation CreateBooking($propertyId: ID! $input: createBookingInput!) {
+  createBooking(propertyId: $propertyId input: $input) {
+    id
+    originId
+    status
+    tenancyOptionRateType
+    statusLastChangedTime
+    totalPriceOriginal
+    totalPrice
+    pricePerNightOriginal
+    pricePerNight
+    rentalTaxRate
+    rentalTaxRateType
+    currency
+    checkInDate
+    checkOutDate
+    expiredReason
+    category
+    expiredReason
+    cancelledReason
+    statusBeforeDisabled
+    device
+    source
+    student {
+      id
+      originId
+      fullName
+    }
+    roomType {
+      ...QueryRoomType
+    }
+    tenancyOption {
+      ...QueryTenancyOption
+    }
+    academicYear {
+      ...QueryAcademicYear
+    }
+    rateFlexibility {
+      ...QueryRateFlexibleInfo
+    }
+  }
+}
+
+
+fragment QueryRoomType on BookingRoomTypeInfo {
+  roomTypeId
+  name
+}
+
+fragment QueryTenancyOption on BookingTenancyOptionInfo {
+  tenancyOptionId
+  name
+  startDate
+  endDate
+  length
+  intervalForTurnaround
+}
+
+fragment QueryAcademicYear on	AcademicYear {
+  id
+  originId
+  name
+  fromYear
+  toYear
+  isEnabled
+  isCurrent
+}
+
+fragment QueryRateFlexibleInfo on RateFlexibilityInfo {
+  rateFlexibilityType
+  freeCancellationDeadlineDate
+}

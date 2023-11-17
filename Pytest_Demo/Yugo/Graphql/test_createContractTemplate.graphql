@@ -1,0 +1,32 @@
+mutation CreateContractTemplate($propertyId: ID! $input: createContractTemplateInput!) {
+  createContractTemplate(propertyId: $propertyId, input:$input) {
+    ...QueryContractTemplateVersion
+  }
+}
+
+fragment QueryContractTemplateVersion on ContractTemplateVersion {
+  id
+  originId
+  content
+  updateNotes
+  status
+  versionId
+  isAutoPublish
+  validFrom
+  validTo
+  contractTemplate {
+    ...QueryContractTemplate
+  }
+}
+
+fragment QueryContractTemplate on ContractTemplate {
+  id
+  name
+  stage
+  contractType
+  relatedBookingCategories
+  versions {
+    id
+    status
+  }
+}

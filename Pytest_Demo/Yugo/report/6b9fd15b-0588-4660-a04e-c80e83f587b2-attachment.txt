@@ -1,0 +1,5 @@
+[32mINFO    [0m run.py:request_control.py:19 ********************************************************************************
+[32mINFO    [0m run.py:request_control.py:20 variables: {"email": "testemail", "password": ""}
+[32mINFO    [0m run.py:request_control.py:21 Response: {'errors': [{'message': 'INVALID_INPUT_DATA', 'locations': [{'line': 4, 'column': 5}], 'path': ['login'], 'extensions': {'code': 'BAD_USER_INPUT'}}], 'data': {'login': None}}
+[35mDEBUG   [0m run.py:assert_control.py:50 期望 status_code 结果为:200;实际 status_code 结果为:200
+[35mDEBUG   [0m run.py:assert_control.py:54 期望 errors_msg 结果为:INVALID_INPUT_DATA;实际 errors_msg 结果为:INVALID_INPUT_DATA

@@ -1,0 +1,6 @@
+query getAcademicYears($propertyId: ID! $status: AcademicYearStatus){
+  getAcademicYears(propertyId:$propertyId status:$status){
+    id
+    name
+  }
+}

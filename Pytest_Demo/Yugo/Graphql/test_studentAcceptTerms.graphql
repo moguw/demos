@@ -1,0 +1,203 @@
+mutation StudentAcceptTerms($bookingId: ID!){
+  studentAcceptTerms(bookingId: $bookingId) {
+    ...QueryBooking
+  }
+}
+
+fragment QueryBooking on Booking {
+  id
+  originId
+  heldToTime
+  status
+  statusLastChangedTime
+  totalPriceOriginal
+  totalPrice
+  pricePerNightOriginal
+  pricePerNight
+  rentalTaxRate
+  rentalTaxRateType
+  currency
+  checkInDate
+  checkOutDate
+  expiredReason
+  category
+  expiredReason
+  cancelledReason
+  statusBeforeDisabled
+  device
+  source
+  student {
+    id
+    originId
+    fullName
+  }
+  roomType {
+    ...QueryRoomType
+  }
+  tenancyOption {
+    ...QueryTenancyOption
+  }
+  academicYear {
+    ...QueryAcademicYear
+  }
+  rateFlexibility {
+    ...QueryRateFlexibleInfo
+  }
+  roomAllocation {
+    ...QueryRoomAllocation
+  }
+  bedStatus {
+    ...QueryBedStatusInfo
+  }
+  installment {
+    ...QueryInstallment
+  }
+  installmentPlans {
+    ...QueryInstallmentPlan
+  }
+  contracts {
+    ...QueryContract
+  }
+  guarantors {
+    ...QueryGuarantor
+  }
+  attachments {
+    ...QueryAttachment
+  }
+}
+
+
+fragment QueryRoomType on BookingRoomTypeInfo {
+  roomTypeId
+  name
+}
+
+fragment QueryTenancyOption on BookingTenancyOptionInfo {
+  tenancyOptionId
+  name
+  startDate
+  endDate
+  length
+  intervalForTurnaround
+}
+
+fragment QueryAcademicYear on	AcademicYear {
+  id
+  originId
+  name
+  fromYear
+  toYear
+  isEnabled
+  isCurrent
+}
+
+fragment QueryRateFlexibleInfo on RateFlexibilityInfo {
+  rateFlexibilityType
+  freeCancellationDeadlineDate
+}
+
+fragment QueryRoomAllocation on RoomAllocationInfo {
+  bedId
+  bedName
+  buildingName
+  floorName
+  flatName
+  roomName
+}
+
+fragment QueryBedStatusInfo on BedStatusInfo {
+  id
+  originId
+  dateFrom
+  dateTo
+  status
+  bed {
+    id
+    originId
+    name
+    property {
+      id
+      originId
+      name
+    }
+    building {
+      id
+      originId
+      name
+    }
+    floor {
+      id
+      originId
+      name
+    }
+    flat {
+      id
+      originId
+      name
+    }
+    room {
+      id
+      originId
+      name
+    }
+  }
+}
+
+fragment QueryInstallment on BookingInstallmentInfo {
+  installmentId
+  name
+}
+
+fragment QueryInstallmentPlan on BookingInstallmentPlan {
+  id
+  originId
+  isDueBeforeBookingConfirmed
+  dueDate
+}
+
+fragment QueryContract on Contract {
+  id
+  originId
+  name
+  fileUuid
+  contractStage
+  status
+  archivedTime
+  archivedReason
+  acceptedIp
+  acceptedTime
+}
+
+fragment QueryGuarantor on Contact {
+  id
+  originId
+  contactType
+  relationship
+  firstName
+  middleName
+  lastName
+  title
+  dateOfBirth
+  addressLine1
+  addressLine2
+  countryTerritory
+  countryTerritoryId
+  cityTownId
+  cityTown
+  postcode
+  mobilePhoneAreaCode
+  mobilePhoneNumber
+  homePhoneAreaCode
+  homePhoneNumber
+  contactEmail
+  contactWithoutPermission
+}
+
+fragment QueryAttachment on Attachment {
+  id
+  originId
+  name
+  fileUuid
+  staffOnly
+}
+

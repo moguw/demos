@@ -1,0 +1,15 @@
+fragment QueryAcademicYear on AcademicYear {
+	  id
+    originId
+    name
+    fromYear
+    toYear
+    isEnabled
+    isCurrent
+    propertyId
+    isInMinPrice
+    __typename
+    academicYearWithCheckStatus{
+    ...QueryacademicYearWithCheckStatus
+  }
+}

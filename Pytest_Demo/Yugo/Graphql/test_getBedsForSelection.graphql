@@ -1,0 +1,30 @@
+query GetBedsForSelection($propertyId: ID! $filter: getBedsForSelectionInput! $pageNumber: Int = 1 $pageSize: Int = 20) {
+  getBedsForSelection(propertyId: $propertyId, filter: $filter, pageNumber: $pageNumber, pageSize: $pageSize) {
+    total
+    totalPage
+    pageNumber
+    pageSize
+    beds {
+      ... QueryBedForSelection
+    }
+  }
+}
+
+fragment QueryBedForSelection on BedForSelection {
+  bedId
+  bedName
+  buildingName
+  floorName
+  flat {
+    id
+    originId
+    name
+  }
+  smokingPreference
+  dietaryPreference
+  petPreference
+  genderPreference
+  disabilityAccess
+  totalNumOfBedsInFlat
+  availableNumOfBedsInFlat
+}

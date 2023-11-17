@@ -1,0 +1,38 @@
+mutation CreateStudentUser($propertyId: ID! $email: String! $firstName: String! $middleName: String $lastName: String! $gender: GenderOptions $heardSource: StudentHeardSourceOptions) {
+  createStudentUser(propertyId: $propertyId, email: $email, firstName: $firstName, middleName: $middleName, lastName: $lastName, gender: $gender, heardSource: $heardSource) {
+    ...QueryStudentUser
+  }
+}
+
+fragment QueryStudentUser on	StudentUser {
+  id
+  originId
+  email
+  emailVerified
+	topLandlordId
+  uuid
+  lastLogin
+  studentInfo {
+    id
+    originId
+    gender
+    email
+    firstName
+    middleName
+    lastName
+    bookings{
+      id
+      status
+    }
+  }
+  editInfo {
+    ...QueryEditInfo
+  }
+}
+
+fragment QueryEditInfo on EditInfo {
+  createdBy
+  createdAt
+  updatedBy
+  updatedAt
+}

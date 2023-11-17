@@ -1,0 +1,82 @@
+query GetFlexibilityControls($propertyId: ID! $academicYearId: ID!) {
+  getFlexibilityControls(propertyId: $propertyId, academicYearId: $academicYearId) {
+    ageRestrictionForBooking {
+      ...QueryThresholdControl
+    }
+    bedPendingBeforeTermsAccepted {
+      ...QueryCountdownControl
+    }
+    paymentDurationBeforeBookingConfirmed {
+      ...QueryCountdownControl
+    }
+    priceUpdate {
+      ...QueryFrequencyControl
+    }
+    maxRequestsForEachStudent {
+      ...QueryThresholdControl
+    }
+    inventoryThresholdForUrgencyMessage {
+      ...QueryThresholdControl
+    }
+    borderToSeparateShortTermBooking {
+      ...QueryThresholdControl
+    }
+    bedPendingBeforeTermsAcceptedAmendment {
+      ...QueryCountdownControl
+    }
+    paymentDurationBeforeBookingConfirmedAmendment {
+      ...QueryCountdownControl
+    }
+    nightsInMonthlyRate {
+      ...QueryThresholdControl
+    }
+    setUpRateType {
+      ...QuerySetUpRateTypeOptionControl
+    }
+  }
+}
+
+fragment QueryCountdownControl on CountdownControl {
+  id
+  originId
+  name
+  category
+  stage
+  countDownUnit
+  countDownValue
+}
+
+fragment QueryFrequencyControl on FrequencyControl {
+  id
+  originId
+  name
+  category
+  frequencyUnit
+  frequencyValue
+}
+
+fragment QueryThresholdControl on ThresholdControl {
+  id
+  originId
+  name
+  category
+  thresholdUnit
+  thresholdValue
+  editInfo {
+    ...QueryEditInfo
+  }
+}
+
+fragment QueryEditInfo on EditInfo {
+  createdAt
+  createdBy
+  updatedAt
+  updatedBy
+}
+
+fragment QuerySetUpRateTypeOptionControl on SetUpRateTypeOptionControl {
+  id
+  name
+  value
+  category
+}

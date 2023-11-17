@@ -1,0 +1,73 @@
+mutation CreateAdditionalFee($propertyId: ID! $academicYearId: ID! $additionalFee: createAdditionalFeeInput! $tiers: [AdditionalFeeTierInput!]!) {
+  createAdditionalFee(propertyId: $propertyId, academicYearId: $academicYearId, additionalFee: $additionalFee, tiers: $tiers) {
+    ...QueryAdditionalFee
+  }
+}
+
+fragment QueryAdditionalFee on AdditionalFee {
+  id
+  originId
+  name
+  description
+  tenancyOptionRateType
+  dueDateInterval
+  dueDateBehavior
+  dueDatePoint
+  amountType
+  feature
+  installmentNumber
+  installmentApplicability
+  isSpecifyRoomType
+  isActivated
+  salesItem {
+    ...QuerySalesItem
+  }
+  editInfo {
+    ...QueryEditInfo
+  }
+}
+
+fragment QueryEditInfo on EditInfo {
+  createdBy
+  createdAt
+  updatedBy
+  updatedAt
+}
+
+fragment QuerySalesItem on SalesItem {
+  id
+  originId
+  name
+  category
+  isInPickList
+  linkage
+  includedInPrice
+  taxes {
+    id
+    taxApplied
+    taxInfo {
+      ...QueryTax
+    }
+  }
+}
+
+fragment QueryTax on Tax {
+  id
+  originId
+  name
+  description
+  taxRates {
+    ...QueryTaxRateInfo
+  }
+  validTaxRate {
+    ...QueryTaxRateInfo
+  }
+}
+
+fragment QueryTaxRateInfo on TaxRateInfo {
+  id
+  originId
+  taxRate
+  validFrom
+  validTo
+}

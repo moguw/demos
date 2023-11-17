@@ -1,0 +1,11 @@
+query getInstallmentsForSelection($propertyId: ID!,$filter: getInstallmentsForSelectionInput!){
+  getInstallmentsForSelection(propertyId:$propertyId,filter:$filter){
+    installments{
+      installmentId
+      installmentName
+      isMarketingDefault
+      installmentNumbers
+      specialOfferCount
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation StudentLogin($email: String! $password: String! $topLandlordId: ID!) {
+  studentLogin(email: $email, password: $password, topLandlordId: $topLandlordId) {
+    authToken
+  }
+}

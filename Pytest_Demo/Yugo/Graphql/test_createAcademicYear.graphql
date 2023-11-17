@@ -1,0 +1,6 @@
+mutation CreateAcademicYear($propertyId: ID!,$academicYear: CreateAcademicYearInput!) {
+        createAcademicYear(propertyId: $propertyId, academicYear: $academicYear) {
+            ...QueryAcademicYear
+            
+          }
+        }

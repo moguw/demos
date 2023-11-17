@@ -1,0 +1,5 @@
+[32mINFO    [0m run.py:request_control.py:19 ********************************************************************************
+[32mINFO    [0m run.py:request_control.py:20 variables: {"propertyId": "eyJ0eXBlIjoiUHJvcGVydHkiLCJpZCI6MTY0fQ==", "academicYear": {"name": "", "fromYear": 2023, "status": "CURRENT", "isInMinPrice": true}}
+[32mINFO    [0m run.py:request_control.py:21 Response: {'errors': [{'message': 'Variable "$academicYear" got invalid value "" at "academicYear.name"; Expected type "NonEmptyString". cannot be an empty string', 'locations': [{'line': 1, 'column': 46}], 'extensions': {'code': 'BAD_USER_INPUT'}}]}
+[35mDEBUG   [0m run.py:assert_control.py:50 期望 status_code 结果为:400;实际 status_code 结果为:400
+[35mDEBUG   [0m run.py:assert_control.py:54 期望 errors_msg 结果为:cannot be an empty string;实际 errors_msg 结果为:Variable "$academicYear" got invalid value "" at "academicYear.name"; Expected type "NonEmptyString". cannot be an empty string

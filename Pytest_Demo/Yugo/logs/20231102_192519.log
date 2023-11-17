@@ -1,0 +1,66 @@
+2023-11-02 19:25:21 [INFO]: 开始执行用例:test_Login.py
+
+2023-11-02 19:25:22 [INFO]: ********************************************************************************
+2023-11-02 19:25:22 [INFO]: variables: {"email": "support.uat1@student.com", "password": "support.uat1@student.com"}
+2023-11-02 19:25:22 [INFO]: Response: {'data': {'login': {'authToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNmMzNWE0NDktZjM3Zi00MDU5LTljOWEtODBhMjFjNGE0ZjVmIiwidXNlcl9pZCI6NDEsInJvbGVfdHlwZSI6ImxhbmRsb3JkIiwiaWF0IjoxNjk4OTI0MzIyLCJpc3MiOiJhdXRoIiwiZXhwIjoxNjk5NTI5MTIyfQ.rTpBLUI0MHw9n-9JTiWoXhlr9l4gXyi1-Bc-kjqJjXs', '__typename': 'LoginPayload'}}}
+2023-11-02 19:25:23 [INFO]: ********************************************************************************
+2023-11-02 19:25:23 [INFO]: variables: {"email": "testemail", "password": "support.uat1@student.com"}
+2023-11-02 19:25:23 [INFO]: Response: {'errors': [{'message': 'INVALID_CREDENTIALS', 'locations': [{'line': 4, 'column': 5}], 'path': ['login'], 'extensions': {'code': 'UNAUTHENTICATED'}}], 'data': {'login': None}}
+2023-11-02 19:25:24 [INFO]: ********************************************************************************
+2023-11-02 19:25:24 [INFO]: variables: {"email": "testemail", "password": ""}
+2023-11-02 19:25:24 [INFO]: Response: {'errors': [{'message': 'INVALID_INPUT_DATA', 'locations': [{'line': 4, 'column': 5}], 'path': ['login'], 'extensions': {'code': 'BAD_USER_INPUT'}}], 'data': {'login': None}}
+2023-11-02 19:25:26 [INFO]: ********************************************************************************
+2023-11-02 19:25:26 [INFO]: variables: {"email": "support.uat1@student.com", "password": "support.uat1@student.com"}
+2023-11-02 19:25:26 [INFO]: Response: {'data': {'login': {'authToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNmMzNWE0NDktZjM3Zi00MDU5LTljOWEtODBhMjFjNGE0ZjVmIiwidXNlcl9pZCI6NDEsInJvbGVfdHlwZSI6ImxhbmRsb3JkIiwiaWF0IjoxNjk4OTI0MzI2LCJpc3MiOiJhdXRoIiwiZXhwIjoxNjk5NTI5MTI2fQ.CisVaZbBiCc2C0sM_iOvhUhosG9yLEXoJYfFcRmBR18'}}}
+2023-11-02 19:25:26 [INFO]: token:{'gibbs-authorization-uat3': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNmMzNWE0NDktZjM3Zi00MDU5LTljOWEtODBhMjFjNGE0ZjVmIiwidXNlcl9pZCI6NDEsInJvbGVfdHlwZSI6ImxhbmRsb3JkIiwiaWF0IjoxNjk4OTI0MzI2LCJpc3MiOiJhdXRoIiwiZXhwIjoxNjk5NTI5MTI2fQ.CisVaZbBiCc2C0sM_iOvhUhosG9yLEXoJYfFcRmBR18'}
+2023-11-02 19:25:26 [INFO]: 开始执行用例:test_CreateBooking.py
+
+2023-11-02 19:25:28 [INFO]: ********************************************************************************
+2023-11-02 19:25:28 [INFO]: variables: {"propertyId": "eyJ0eXBlIjoiUHJvcGVydHkiLCJpZCI6MTQxfQ", "input": {"academicYearId": "eyJ0eXBlIjoiQWNhZGVtaWNZZWFyIiwiaWQiOjIxNn0=", "tenancyStartDate": "2023-01-03", "tenancyOptionRateType": "NIGHTLY", "tenancyEndDate": "2023-12-31", "roomTypeId": "eyJ0eXBlIjoiUm9vbVR5cGUiLCJpZCI6MTA4NX0=", "tenancyOptionId": "eyJ0eXBlIjoiVGVuYW5jeU9wdGlvbiIsImlkIjo2Nzl9", "studentId": "eyJ0eXBlIjoiU3R1ZGVudCIsImlkIjoxMTEzMjB9"}}
+2023-11-02 19:25:28 [INFO]: Response: {'data': {'createBooking': {'id': 'eyJ0eXBlIjoiQm9va2luZyIsImlkIjoxMjMxMTN9', 'originId': 123113, 'status': 'APPLIED', 'tenancyOptionRateType': 'NIGHTLY', 'statusLastChangedTime': '2023-11-02T11:25:28+00:00', 'totalPriceOriginal': None, 'totalPrice': None, 'pricePerNightOriginal': None, 'pricePerNight': 0, 'rentalTaxRate': None, 'rentalTaxRateType': None, 'currency': 'AUD', 'checkInDate': None, 'checkOutDate': None, 'expiredReason': None, 'category': 'DIRECT_LET', 'cancelledReason': None, 'statusBeforeDisabled': None, 'device': 'DESKTOP', 'source': 'GIBBS', 'student': {'id': 'eyJ0eXBlIjoiU3R1ZGVudCIsImlkIjoxMTEzMjB9', 'originId': 111320, 'fullName': 'edison wang'}, 'roomType': {'roomTypeId': 'eyJ0eXBlIjoiUm9vbVR5cGUiLCJpZCI6MTA4NX0=', 'name': 'Premium Studio'}, 'tenancyOption': {'tenancyOptionId': 'eyJ0eXBlIjoiVGVuYW5jeU9wdGlvbiIsImlkIjo2Nzl9', 'name': 'autoTest(do not delete)', 'startDate': '2023-01-03', 'endDate': '2023-12-31', 'length': 362, 'intervalForTurnaround': 0}, 'academicYear': {'id': 'eyJ0eXBlIjoiQWNhZGVtaWNZZWFyIiwiaWQiOjIxNn0=', 'originId': 216, 'name': '2022/2023', 'fromYear': 2022, 'toYear': 2023, 'isEnabled': True, 'isCurrent': True}, 'rateFlexibility': {'rateFlexibilityType': 'FULL_FLEX', 'freeCancellationDeadlineDate': '2023-01-03'}}}}
+2023-11-02 19:25:28 [INFO]: 开始执行用例:test_getBedsForSelection.py
+
+2023-11-02 19:25:29 [INFO]: ********************************************************************************
+2023-11-02 19:25:29 [INFO]: variables: {"pageNumber": 1, "pageSize": 20, "propertyId": "eyJ0eXBlIjoiUHJvcGVydHkiLCJpZCI6MTQxfQ", "bookingCategory": "DIRECT_LET", "filter": {"roomTypeId": "eyJ0eXBlIjoiUm9vbVR5cGUiLCJpZCI6MTA4NX0=", "tenancyOptionId": "eyJ0eXBlIjoiVGVuYW5jeU9wdGlvbiIsImlkIjo2Nzl9", "tenancyStartDate": "2023-01-03", "tenancyEndDate": "2023-12-31", "intervalForTurnaround": 0}}
+2023-11-02 19:25:29 [INFO]: Response: {'data': {'getBedsForSelection': {'total': 0, 'totalPage': 0, 'pageNumber': 1, 'pageSize': 20, 'beds': []}}}
+2023-11-02 19:25:29 [INFO]: 开始执行用例:test_SelectBed.py
+
+2023-11-02 19:25:30 [INFO]: ********************************************************************************
+2023-11-02 19:25:30 [INFO]: variables: {"propertyId": "eyJ0eXBlIjoiUHJvcGVydHkiLCJpZCI6MTQxfQ", "input": {"bookingId": "eyJ0eXBlIjoiQm9va2luZyIsImlkIjoxMjMxMTN9", "bedId": "None"}}
+2023-11-02 19:25:30 [INFO]: Response: {'errors': [{'message': 'Variable "$input" got invalid value "None" at "input.bedId"; Expected type "DecodedBedID". INVALID_NODE_ID', 'locations': [{'line': 1, 'column': 37}], 'extensions': {'code': 'BAD_USER_INPUT'}}]}
+2023-11-02 19:25:30 [INFO]: 开始执行用例:test_getInstallmentsForSelection.py
+
+2023-11-02 19:25:32 [INFO]: ********************************************************************************
+2023-11-02 19:25:32 [INFO]: variables: {"propertyId": "eyJ0eXBlIjoiUHJvcGVydHkiLCJpZCI6MTQxfQ", "filter": {"academicYearId": "eyJ0eXBlIjoiQWNhZGVtaWNZZWFyIiwiaWQiOjIxNn0=", "tenancyOptionId": "eyJ0eXBlIjoiVGVuYW5jeU9wdGlvbiIsImlkIjo2Nzl9", "tenancyOptionRateType": "NIGHTLY", "tenancyStartDate": "2023-01-03", "tenancyEndDate": "2023-12-31", "pricePerNightOriginal": 4.285714, "roomTypeId": "eyJ0eXBlIjoiUm9vbVR5cGUiLCJpZCI6MTA4NX0=", "services": []}, "bookingCategory": "DIRECT_LET"}
+2023-11-02 19:25:32 [INFO]: Response: {'data': {'getInstallmentsForSelection': {'installments': [{'installmentId': 'eyJ0eXBlIjoiSW5zdGFsbG1lbnQiLCJpZCI6NzUwfQ==', 'installmentName': 'Full payment', 'isMarketingDefault': None, 'installmentNumbers': 1, 'specialOfferCount': 0}]}}}
+2023-11-02 19:25:32 [INFO]: 开始执行用例:test_getInstallmentWithPlans.py
+
+2023-11-02 19:25:33 [INFO]: ********************************************************************************
+2023-11-02 19:25:33 [INFO]: variables: {"propertyId": "eyJ0eXBlIjoiUHJvcGVydHkiLCJpZCI6MTQxfQ", "bookingCategory": "DIRECT_LET", "filter": {"installmentId": "eyJ0eXBlIjoiSW5zdGFsbG1lbnQiLCJpZCI6NzUwfQ==", "tenancyOptionId": "eyJ0eXBlIjoiVGVuYW5jeU9wdGlvbiIsImlkIjo2Nzl9", "tenancyStartDate": "2023-01-03", "tenancyEndDate": "2023-12-31", "studentId": "eyJ0eXBlIjoiU3R1ZGVudCIsImlkIjoxMTEzMjB9", "tenancyOptionRateType": "NIGHTLY", "pricePerNightOriginal": 4.285714, "services": [], "roomTypeId": "eyJ0eXBlIjoiUm9vbVR5cGUiLCJpZCI6MTA4NX0="}}
+2023-11-02 19:25:33 [INFO]: Response: {'data': {'getInstallmentWithPlans': {'totalPrice': 1551.43, 'installmentDataHash': '4c30645d19e2bc254266f484190638f428fecc0c', 'installmentWithPlans': {'installmentId': 'eyJ0eXBlIjoiSW5zdGFsbG1lbnQiLCJpZCI6NzUwfQ==', 'installmentName': 'Full payment', 'installmentNumbers': 1, 'installmentPlans': [{'dueDate': '2023-11-02', 'amount': 1551.43, 'isDueBeforeBookingConfirmed': False}]}, 'paymentDueNow': {'amountDue': 0, 'details': []}, 'priceBreakDown': {'totalPrice': 1551.43, 'details': [{'name': '362 Nights', 'amount': 1551.43, 'description': None, 'taxInfo': {'amount': 80.88}}], 'refundableDetails': []}, 'additionalFees': []}}}
+2023-11-02 19:25:33 [INFO]: 开始执行用例:test_selectInstallment.py
+
+2023-11-02 19:25:35 [INFO]: ********************************************************************************
+2023-11-02 19:25:35 [INFO]: variables: {"propertyId": "eyJ0eXBlIjoiUHJvcGVydHkiLCJpZCI6MTQxfQ", "input": {"installmentDataHash": "4c30645d19e2bc254266f484190638f428fecc0c", "installmentId": "eyJ0eXBlIjoiSW5zdGFsbG1lbnQiLCJpZCI6NzUwfQ==", "bookingId": "eyJ0eXBlIjoiQm9va2luZyIsImlkIjoxMjMxMTN9"}}
+2023-11-02 19:25:35 [INFO]: Response: {'errors': [{'message': 'INVALID_STATUS_FOR_INSTALLMENT_SELECTION', 'locations': [{'line': 2, 'column': 3}], 'path': ['selectInstallment'], 'extensions': {'code': 'BAD_USER_INPUT'}}], 'data': {'selectInstallment': None}}
+2023-11-02 19:25:36 [INFO]: Connected (version 2.0, client OpenSSH_7.6p1)
+2023-11-02 19:25:37 [INFO]: Authentication (publickey) successful!
+2023-11-02 19:25:41 [INFO]: ********************************************************************************
+2023-11-02 19:25:41 [INFO]: variables: {"email": "edison.wang+new@student.com", "password": "12345678A", "topLandlordId": "eyJ0eXBlIjoiTGFuZGxvcmQiLCJpZCI6MX0="}
+2023-11-02 19:25:41 [INFO]: Response: {'data': {'studentLogin': {'authToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNDAyODczYmYtODY4NS00ZmRiLWE2NTktOThhMTVkZmRkMDYzIiwidXNlcl9pZCI6MTEzMzcsInJvbGVfdHlwZSI6InN0dWRlbnQiLCJhcGlfa2V5X2lkIjpudWxsLCJpYXQiOjE2OTg5MjQzNDEsImlzcyI6ImF1dGgiLCJleHAiOjE3MDE1MTYzNDF9.kx5mrlgFtBfpYhElWXsLG_mKawzEgGZ6SiJamKf2-8Q'}}}
+2023-11-02 19:25:41 [INFO]: SP_token:{'sp-authorization-uat3': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNDAyODczYmYtODY4NS00ZmRiLWE2NTktOThhMTVkZmRkMDYzIiwidXNlcl9pZCI6MTEzMzcsInJvbGVfdHlwZSI6InN0dWRlbnQiLCJhcGlfa2V5X2lkIjpudWxsLCJpYXQiOjE2OTg5MjQzNDEsImlzcyI6ImF1dGgiLCJleHAiOjE3MDE1MTYzNDF9.kx5mrlgFtBfpYhElWXsLG_mKawzEgGZ6SiJamKf2-8Q'}
+2023-11-02 19:25:41 [INFO]: 开始执行用例:TestCase/TestSP/bookingJourney/test_studentFillPersonalDetail.py
+
+2023-11-02 19:25:42 [INFO]: ********************************************************************************
+2023-11-02 19:25:42 [INFO]: variables: {"input": {"id": "eyJ0eXBlIjoiQm9va2luZyIsImlkIjoxMjMxMTN9", "customFieldValues": [], "studentPersonalDetailInput": {"title": "DR", "firstName": "edison", "middleName": null, "lastName": "wang", "mobilePhoneAreaCode": "+1", "mobilePhoneNumber": "123456789003", "homePhoneAreaCode": null, "homePhoneNumber": null, "addressLine1": "shanghai", "addressLine2": null, "cityTown": "Aibak", "countryTerritoryId": "eyJ0eXBlIjoiQ291bnRyeSIsImlkIjo1fQ==", "cityTownId": "eyJ0eXBlIjoiQ2l0eSIsImlkIjo2MzI4NX0=", "major": "software engineer", "yearOfStudy": "SECOND", "degreeClassification": "UNDERGRADUATE", "postcode": null, "nationality": "Afghan", "dateOfBirth": "1990-07-21", "gender": "MALE", "destinationUniversity": "Cork College of Commerce"}, "guarantorInformationInput": null, "bookingReferralInput": {"referral": null}}}
+2023-11-02 19:25:42 [INFO]: Response: {'errors': [{'message': 'INVALID_STATUS_FOR_PERSONAL_DETAIL', 'locations': [{'line': 2, 'column': 3}], 'path': ['studentFillPersonalDetail'], 'extensions': {'code': 'BAD_USER_INPUT'}}], 'data': {'studentFillPersonalDetail': None}}
+2023-11-02 19:25:42 [INFO]: 开始执行用例:TestCase/TestSP/bookingJourney/test_studentAcceptTerms.py
+
+2023-11-02 19:25:43 [INFO]: ********************************************************************************
+2023-11-02 19:25:43 [INFO]: variables: {"bookingId": "eyJ0eXBlIjoiQm9va2luZyIsImlkIjoxMjMxMTN9"}
+2023-11-02 19:25:43 [INFO]: Response: {'errors': [{'message': 'INVALID_STATUS_FOR_ACCEPT_TERMS', 'locations': [{'line': 2, 'column': 3}], 'path': ['studentAcceptTerms'], 'extensions': {'code': 'BAD_USER_INPUT'}}], 'data': {'studentAcceptTerms': None}}
+2023-11-02 19:25:43 [INFO]: 开始执行用例:TestCase/TestSP/bookingJourney/test_studentGetBooking.py
+
+2023-11-02 19:25:45 [INFO]: ********************************************************************************
+2023-11-02 19:25:45 [INFO]: variables: {"id": "eyJ0eXBlIjoiQm9va2luZyIsImlkIjoxMjMxMTN9"}
+2023-11-02 19:25:45 [INFO]: Response: {'data': {'studentGetBooking': {'invoicedPaymentItems': []}}}

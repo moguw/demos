@@ -1,0 +1,5 @@
+mutation initRateCard($propertyId: ID! $academicYearId: ID!) {
+    initRateCard(propertyId: $propertyId,academicYearId: $academicYearId) {
+      	success
+  }
+}

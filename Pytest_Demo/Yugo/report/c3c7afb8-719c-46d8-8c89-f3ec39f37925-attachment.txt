@@ -1,0 +1,6 @@
+[32mINFO    [0m run.py:conftest.py:16 开始执行用例:test_Login.py
+[32mINFO    [0m run.py:request_control.py:19 ********************************************************************************
+[32mINFO    [0m run.py:request_control.py:20 variables: {"email": "support.uat1@student.com", "password": "support.uat1@student.com"}
+[32mINFO    [0m run.py:request_control.py:21 Response: {'data': {'login': {'authToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNmMzNWE0NDktZjM3Zi00MDU5LTljOWEtODBhMjFjNGE0ZjVmIiwidXNlcl9pZCI6NDEsInJvbGVfdHlwZSI6ImxhbmRsb3JkIiwiaWF0IjoxNjk2NzU3NzA5LCJpc3MiOiJhdXRoIiwiZXhwIjoxNjk3MzYyNTA5fQ.IpEurOssj19lkTFiQdMCxMJB3KyewNB8HRf6LSc9VrU', '__typename': 'LoginPayload'}}}
+[35mDEBUG   [0m run.py:assert_control.py:22 期望 status_code 结果为:200;实际 status_code 结果为:200
+[35mDEBUG   [0m run.py:assert_control.py:28 期望 sucess_msg 结果为:LoginPayload;实际 sucess_msg 结果为:{'login': {'authToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNmMzNWE0NDktZjM3Zi00MDU5LTljOWEtODBhMjFjNGE0ZjVmIiwidXNlcl9pZCI6NDEsInJvbGVfdHlwZSI6ImxhbmRsb3JkIiwiaWF0IjoxNjk2NzU3NzA5LCJpc3MiOiJhdXRoIiwiZXhwIjoxNjk3MzYyNTA5fQ.IpEurOssj19lkTFiQdMCxMJB3KyewNB8HRf6LSc9VrU', '__typename': 'LoginPayload'}}

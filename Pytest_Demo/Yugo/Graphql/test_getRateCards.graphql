@@ -1,0 +1,26 @@
+query GetRateCards($propertyId: ID! $input: getRateCardsInput!) {
+  getRateCards(propertyId: $propertyId, input: $input) {
+    formula
+    rateCards {
+      ...QueryRateCard
+    }
+  }
+}
+
+fragment QueryRateCard on RateCard {
+  id
+  originId
+  name
+  isBasic
+  active
+  cardType
+  cardPerformance
+  occupancyScope
+  occupancyBreakpointType
+  isIncludedNomination
+  academicYearId
+  incrementType
+  isSpecifyRoomType
+  isPriceLimitation
+  linkToNomination
+}

@@ -1,0 +1,5 @@
+[Sat, 07 Oct 2023 10:45:07]-[run.py]-[request_control.py]-[line:19]-[INFO]: ********************************************************************************
+[Sat, 07 Oct 2023 10:45:07]-[run.py]-[request_control.py]-[line:20]-[INFO]: variables: {"propertyId": "eyJ0eXBlIjoiUHJvcGVydHkiLCJpZCI6MTY0fQ==", "academicYear": {"name": "", "fromYear": 2023, "status": "CURRENT", "isInMinPrice": true}}
+[Sat, 07 Oct 2023 10:45:07]-[run.py]-[request_control.py]-[line:21]-[INFO]: Response: {'errors': [{'message': 'Variable "$academicYear" got invalid value "" at "academicYear.name"; Expected type "NonEmptyString". cannot be an empty string', 'locations': [{'line': 1, 'column': 46}], 'extensions': {'code': 'BAD_USER_INPUT'}}]}
+[Sat, 07 Oct 2023 10:45:07]-[run.py]-[assert_control.py]-[line:50]-[DEBUG]: 期望 status_code 结果为:400;实际 status_code 结果为:400
+[Sat, 07 Oct 2023 10:45:07]-[run.py]-[assert_control.py]-[line:54]-[DEBUG]: 期望 errors_msg 结果为:cannot be an empty string;实际 errors_msg 结果为:Variable "$academicYear" got invalid value "" at "academicYear.name"; Expected type "NonEmptyString". cannot be an empty string

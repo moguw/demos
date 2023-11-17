@@ -1,0 +1,25 @@
+mutation updateMainCard( $propertyId: ID! $cardConfig: UpdateMainCardInput!) {
+  updateMainCard( propertyId: $propertyId cardConfig: $cardConfig) {
+    isPriceLimitation
+    isSpecifyRoomType
+    academicYearId
+    basicTableData {
+      id
+      name
+      prices {
+        ...QueryBasicTablePricePayload
+      }
+    }
+    active
+  }
+}
+
+fragment QueryBasicTablePricePayload on BasicTablePricePayload {
+  id
+  price
+  priceMax
+  priceMin
+  roomTypeId
+}
+
+

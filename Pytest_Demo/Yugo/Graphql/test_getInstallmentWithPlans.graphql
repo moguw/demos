@@ -1,0 +1,87 @@
+query	GetInstallmentWithPlans($propertyId: ID!  $filter: getInstallmentWithPlansInput!) {
+  getInstallmentWithPlans(propertyId: $propertyId, filter: $filter) {
+    totalPrice
+    installmentDataHash
+    installmentWithPlans {
+      ...QueryInstallmentWithPlans
+    }
+    paymentDueNow {
+      ...QueryPaymentDueNowInfo
+    }
+    priceBreakDown {
+      ...QueryPriceBreakDownInfo
+    }
+    additionalFees {
+      ...QueryBookingAdditionalFee
+    }
+  }
+}
+
+fragment QueryInstallmentWithPlans on InstallmentWithPlans {
+  installmentId
+  installmentName
+  installmentNumbers
+  installmentPlans {
+    dueDate
+    amount
+    isDueBeforeBookingConfirmed
+    # partOfRentAdditionalFeeDeduct
+    # partOfRentAdditionalFees {
+    #   name
+    #   amount
+    #   description
+    # }
+  }
+}
+
+fragment QueryPaymentDueNowInfo on PaymentDueNowInfo {
+  amountDue
+  details {
+    name
+    amount
+    description
+  }
+}
+
+fragment QueryPriceBreakDownInfo on PriceBreakDownInfo {
+  totalPrice
+  details {
+    name
+    amount
+    description
+    taxInfo {
+      amount
+    }
+  }
+  refundableDetails {
+    name
+    amount
+    description
+    taxInfo {
+      amount
+    }
+  }
+}
+
+fragment QueryBookingAdditionalFee on BookingAdditionalFee {
+  additionalFeeCardConfigId
+  name
+  dueDate
+  dueAmount
+  feature
+  description
+  installmentIndex
+  installmentNumber
+  taxRateId
+  taxRate
+  taxAmount
+  dueAmountWithTax
+  isDueBeforeBookingConfirmed 
+  salesItemId
+  # paymentItem {
+  #   id
+  #   status
+  #   paidAmount
+  #   totalAmount
+  # }
+}

@@ -1,0 +1,13 @@
+mutation UpdateAcademicYearBookingStatus( $propertyId: ID!, $academicYear: updateAcademicYearBookingStatus) {
+    updateAcademicYearBookingStatus(propertyId: $propertyId, academicYear: $academicYear) {
+      id
+      originId
+      name
+      fromYear
+      toYear
+      isEnabled
+      isCurrent
+      isInMinPrice
+      hasService
+    }
+  }

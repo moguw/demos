@@ -1,0 +1,7 @@
+[32mINFO    [0m run.py:conftest.py:16 开始执行用例:test_createRoomGroup.py
+[32mINFO    [0m run.py:request_control.py:19 ********************************************************************************
+[32mINFO    [0m run.py:request_control.py:20 variables: {"propertyId": "eyJ0eXBlIjoiUHJvcGVydHkiLCJpZCI6MTY0fQ==", "name": "RG_0114174"}
+[32mINFO    [0m run.py:request_control.py:21 Response: {'data': {'createRoomGroup': {'id': 'eyJ0eXBlIjoiUm9vbUdyb3VwIiwiaWQiOjE4MTR9'}}}
+[35mDEBUG   [0m run.py:assert_control.py:22 期望 status_code 结果为:200;实际 status_code 结果为:200
+[35mDEBUG   [0m run.py:assert_control.py:28 期望 sucess_msg 结果为:RoomGroup;实际 sucess_msg 结果为:{'createRoomGroup': {'id': 'eyJ0eXBlIjoiUm9vbUdyb3VwIiwiaWQiOjE4MTR9'}}
+[35mDEBUG   [0m run.py:assert_control.py:38 sql查询结果为:1814;实际response结果为:1814

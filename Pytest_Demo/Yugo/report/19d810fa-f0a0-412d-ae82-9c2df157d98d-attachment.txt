@@ -1,0 +1,7 @@
+[Sat, 07 Oct 2023 10:44:41]-[run.py]-[conftest.py]-[line:16]-[INFO]: 开始执行用例:test_Login.py
+
+[Sat, 07 Oct 2023 10:44:43]-[run.py]-[request_control.py]-[line:19]-[INFO]: ********************************************************************************
+[Sat, 07 Oct 2023 10:44:43]-[run.py]-[request_control.py]-[line:20]-[INFO]: variables: {"email": "support.uat1@student.com", "password": "support.uat1@student.com"}
+[Sat, 07 Oct 2023 10:44:43]-[run.py]-[request_control.py]-[line:21]-[INFO]: Response: {'data': {'login': {'authToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNmMzNWE0NDktZjM3Zi00MDU5LTljOWEtODBhMjFjNGE0ZjVmIiwidXNlcl9pZCI6NDEsInJvbGVfdHlwZSI6ImxhbmRsb3JkIiwiaWF0IjoxNjk2NjQ2NjM0LCJpc3MiOiJhdXRoIiwiZXhwIjoxNjk3MjUxNDM0fQ.BYMsnmKOoBdJ6JJp0j-To5C7ewqY33CsNRd9ggiodeY', '__typename': 'LoginPayload'}}}
+[Sat, 07 Oct 2023 10:44:43]-[run.py]-[assert_control.py]-[line:22]-[DEBUG]: 期望 status_code 结果为:200;实际 status_code 结果为:200
+[Sat, 07 Oct 2023 10:44:43]-[run.py]-[assert_control.py]-[line:28]-[DEBUG]: 期望 sucess_msg 结果为:LoginPayload;实际 sucess_msg 结果为:{'login': {'authToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNmMzNWE0NDktZjM3Zi00MDU5LTljOWEtODBhMjFjNGE0ZjVmIiwidXNlcl9pZCI6NDEsInJvbGVfdHlwZSI6ImxhbmRsb3JkIiwiaWF0IjoxNjk2NjQ2NjM0LCJpc3MiOiJhdXRoIiwiZXhwIjoxNjk3MjUxNDM0fQ.BYMsnmKOoBdJ6JJp0j-To5C7ewqY33CsNRd9ggiodeY', '__typename': 'LoginPayload'}}

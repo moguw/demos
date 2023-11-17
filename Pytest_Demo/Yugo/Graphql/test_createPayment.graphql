@@ -1,0 +1,12 @@
+mutation createPayment($propertyId: ID! $input: createPaymentInput!
+){
+  createPayment(propertyId:$propertyId input:$input){
+    id
+    bookingId
+    method
+    sourceBookingId
+    targetBookingId
+    isProcessing
+    isAutomaticPayment
+  }
+}

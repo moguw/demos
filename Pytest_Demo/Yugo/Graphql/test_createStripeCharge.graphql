@@ -1,0 +1,17 @@
+mutation createStripeCharge($paymentItemIds: [ID!]! $propertyId: ID! $bookingId: ID! $amount: Float!
+$isBookingAmendment: Boolean = false
+$savePaymentMethod: Boolean = false
+$isDefault: Boolean = true
+$paymentMethodType: PaymentMethodTypeOptions!){
+  createStripeCharge(paymentItemIds: $paymentItemIds
+  propertyId: $propertyId
+  bookingId : $bookingId
+	amount: $amount
+  isBookingAmendment: $isBookingAmendment
+  savePaymentMethod: $savePaymentMethod
+  isDefault: $isDefault
+  paymentMethodType: $paymentMethodType){
+    id
+    clientSecret
+  }
+}

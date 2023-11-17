@@ -1,0 +1,5 @@
+mutation createRoomGroup($propertyId:ID! $name: String!){
+  createRoomGroup(propertyId:$propertyId name:$name){
+    id
+  }
+}
