@@ -6,7 +6,7 @@ import os,sys
 import time
 #if not exits log文件夹，则创建文件夹
 def create_file():
-    log_dir = os.path.dirname(os.getcwd()) + '/DemoForPytest/Pytest_Demo/Yugo/log/'
+    log_dir = os.path.dirname(os.getcwd()) + '/Pytest_Demo/Yugo/log/'
     print(log_dir)
     if not os.path.exists(log_dir):
         os.mkdir(log_dir)
