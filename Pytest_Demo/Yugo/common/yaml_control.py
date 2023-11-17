@@ -4,11 +4,12 @@
 import os,time,datetime,yaml,ast,random
 from typing import Any, Text, Union
 env_file = os.environ['ENV']
+markers_type = os.environ['markers']
 project_path = '/Yugo_Pytest/Pytest_Demo/Yugo/conf/env/'
 
 def env_path():
     current_path = os.path.dirname(os.path.abspath('.'))
-    env_file_path = current_path + project_path + env_file + '.yaml'
+    env_file_path = current_path + project_path + markers_type + env_file + '.yaml'
     return env_file_path
 
 def read_data(file_path):
