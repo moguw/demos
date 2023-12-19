@@ -7,8 +7,8 @@ if __name__ == "__main__":
     pytest.main(['-m %s' % markers_type])
     # pytest.main(["-m smoke"])
     # pytest.main(["-m regression"])
-    cmd = 'allure serve ../Pytest_Demo/Yugo/report --clean-alluredir'
-    allure_control.allure_report(cmd)
+    cmd = 'allure generate ../Pytest_Demo/Yugo/report -o ../Pytest_Demo/Yugo/report -c'
+    os.system(cmd)
 
     """生成allure报告"""
     """
