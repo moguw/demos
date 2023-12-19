@@ -4,10 +4,10 @@ from common import allure_control
 
 if __name__ == "__main__":
     markers_type = os.environ['markers']
-    pytest.main(['-m %s' % markers_type])
+    pytest.main(['-m %s' % markers_type,"--alluredir", "../PYTEST_DEMO/Yugo/report"])
     # pytest.main(["-m smoke"])
     # pytest.main(["-m regression"])
-    cmd = 'allure generate ../Pytest_Demo/Yugo/report -o ../Pytest_Demo/Yugo/report -c'
+    cmd = 'allure generate ../PYTEST_DEMO/Yugo/report -c'
     os.system(cmd)
 
     """生成allure报告"""
